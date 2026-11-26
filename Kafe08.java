@@ -1,18 +1,18 @@
 public class Kafe08 {
 
-    public static void ubahNama(String nama) {
+    public static int hitungTotalHarga08(int pilihanMenu, int banyakItem) {
 
-        nama = "Tamu";
+        int[] hargaItem = {15000, 20000, 22000, 12000, 10000, 18000};
 
-        System.out.println("Di dalam fungsi: " + nama);
+        int hargaTotal = hargaItem[pilihanMenu - 1] * banyakItem;
+
+        return hargaTotal;
     }
 
     public static void main(String[] args) {
 
-        String nama = "Andi";
+        int totalBayar = hitungTotalHarga08(1, 2);
 
-        ubahNama(nama);
-
-        System.out.println("Di main: " + nama);
+        System.out.println("Total harga: Rp " + totalBayar);
     }
 }
